@@ -89,7 +89,7 @@
 								</div>
 								<div class="field">
 									<label for="nome">Nome do representante:</label>
-									<input type="text" id="inscricaoEmpresa" name="inscricaoEmpresa" placeholder="Digite a inscrição estadual da empresa*" required>
+									<input type="text" id="nomeRepresentante" name="nomeRepresentante" placeholder="Digite a inscrição estadual da empresa*" required>
 								</div>
 								<div class="field">
 									<label for="nome">CPF do representante legal:</label>

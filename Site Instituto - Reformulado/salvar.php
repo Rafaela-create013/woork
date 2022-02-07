@@ -16,21 +16,25 @@
         $ds_endereco = $_POST["enderecoEmpresa"];
         $cd_cnpj = $_POST["cnpjEmpresa"];
         $cd_inscricao = $_POST["inscricaoEmpresa"];
+        $nm_representante = $_POST["nomeRepresentante"];
         $cd_cpf = $_POST["cpfRepresentante"];
         $email = $_POST["email"];
 
         // insert no banco de dados
-        $result = ("INSERT INTO tb_patrocinador (cd_cnpj ,cd_cpf_representante, nm_empresa,
-                                                ds_endereco, cd_inscricao) 
+        $result = ("INSERT INTO tb_patrocinador (cd_cnpj, cd_cpf_representante, nm_empresa,
+                                                ds_endereco, cd_inscricao, nm_representante) 
                                     VALUES ('$cd_cnpj', 
                                             '$cd_cpf',
                                             '$nm_empresa',
                                             '$ds_endereco',
-                                            '$cd_inscricao')"); 
+                                            '$cd_inscricao',
+                                            '$nm_representante')"); 
     }   
-    if ($conecta->query($result) === TRUE) {
+    if (mysqli_query($conecta, $result)) {
         echo "New record created successfully";
       } else {
         echo "Error: " . $result . "<br>" . $conecta->error;
       }
+     
+mysqli_close($conecta);
 ?> 
