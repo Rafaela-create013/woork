@@ -41,39 +41,41 @@
             </div>
             <div class="field">
                 <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" required>
+                <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" >
             </div>
             
-            <input type="submit" onclick="document.getElementById('id01').style.display='block'" name="acao" value="ABRIR MINUTA DO CONTRATO">
-
-            <div id="id01" class="modal">
+            <input type="submit" onclick="document.getElementById('id01').style.display='block'" id="btnmodal" name="acao" value="ABRIR MINUTA DO CONTRATO">        
+    </form>
+    <div id="id01" class="modal">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-              <form class="modal-content">
+        <form class="modal-content" action="salvar.php">
                 <div class="container">
                   <h1>INSTRUMENTO PARTICULAR DE CONTRATO DE PATROCÍNIO</h1>
                   <p></p>
             
             
-            Pelo presente instrumento particular, as partes (nome do patrocinador), empresa com sede na (endereço completo do patrocinador), inscrita no CNPJ XX.XXX.XXX/XXXX-XX, doravante denominada simplesmente PATROCINADOR, em nome de seu representante legal, (nome do representante legal), CPF nº XX.XXX.XXX-XX, e de outro, o INSTITUTO HISTÓRICO E GEOGRÁFICO DE SANTOS, entidade civil, com personalidade jurídica de direito privado, sem fins Conselheiro Nébias, 689, Boqueirão, Santos, SP, CEP 11045-003, doravante designada simplesmente PATROCINADA, neste ato representada pelo seu Presidente, Sergio Willians dos Reis, brasileiro, jornalista, CPF nº 074.188.538-74, residente e domiciliado em Santos/SP, têm justo e acordado as cláusulas e condições abaixo:
+            Pelo presente instrumento particular, as partes <?php $nm_empresa = $_POST["nomeEmpresa"]; if($nm_empresa != null){echo $nm_empresa; } ?>, empresa com sede na <?php $ds_endereco = $_POST["enderecoEmpresa"]; if($ds_endereco != null){echo $ds_endereco; } ?>, inscrita no CNPJ <?php $cd_cnpj = $_POST["cnpjEmpresa"]; if($cd_cnpj != null){echo $cd_cnpj; } ?>,
+             doravante denominada simplesmente <b>PATROCINADOR</b>, em nome de seu representante legal, <?php $nm_representante = $_POST["nomeRepresentante"]; if($nm_representante != null){echo $nm_representante; } ?> , CPF nº <?php $cd_cpf = $_POST["cpf"]; if($cd_cpf != null){echo $cd_cpf; } ?>, e de outro, o <b>INSTITUTO HISTÓRICO E GEOGRÁFICO DE SANTOS</b>, entidade civil, com personalidade jurídica 
+             de direito privado, sem fins Conselheiro Nébias, 689, Boqueirão, Santos, SP, CEP 11045-003, doravante designada simplesmente <b>PATROCINADA</b>, neste ato representada pelo seu Presidente, Sergio Willians dos Reis, brasileiro, jornalista, CPF nº 074.188.538-74, residente e domiciliado em Santos/SP, têm justo e acordado as cláusulas e condições abaixo:
             
-            CLÁUSULA PRIMEIRA: Do objeto
+            <h2>CLÁUSULA PRIMEIRA: Do objeto</h2>
             
-            O presente contrato tem por objeto a concessão de Patrocínio à PATROCINADA dentro do Programa intitulado “100 POR SANTOS”, que tem por objetivo custear a operação do programa de digitalização de acervos históricos (jornais, revistas e outros documentos) da região da Baixada Santista.
+            O presente contrato tem por objeto a concessão de Patrocínio à <b>PATROCINADA</b> dentro do Programa intitulado “100 POR SANTOS”, que tem por objetivo custear a operação do programa de digitalização de acervos históricos (jornais, revistas e outros documentos) da região da Baixada Santista.
             
             <h2>CLÁUSULA SEGUNDA: Do valor</h2>
             
-            Em consonância com o plano de comercialização de patrocínios que declara conhecer, o PATROCINADOR opta em participar do programa “100 POR SANTOS” contribuindo com a quantia de R$ 4.800,00 (quatro mil e oitocentos reais), dividida em 24 parcelas mensais de R$ 200,00 (Duzentos Reais). 
+            Em consonância com o plano de comercialização de patrocínios que declara conhecer, o <b>PATROCINADOR</b> opta em participar do programa “100 POR SANTOS” contribuindo com a quantia de <b>R$ 4.800,00 (quatro mil e oitocentos reais), dividida em 24 parcelas mensais de R$ 200,00 (Duzentos Reais).</b>
             
-            Parágrafo Primeiro: O valor mensal pode ser depositado em conta corrente no nome do Instituto Histórico e Geográfico de Santos ou por meio de pagamento por boleto bancário, ficando a opção a critério do PATROCINADOR.
+            <b>Parágrafo Primeiro:</b> O valor mensal pode ser depositado em conta corrente no nome do Instituto Histórico e Geográfico de Santos ou por meio de pagamento por boleto bancário, ficando a opção a critério do PATROCINADOR.
             
-            Parágrafo Segundo: Se a opção for por depósito em conta corrente, o mesmo deve ser feito em nome do INSTITUTO HISTÓRICO E GEOGRÁFICO DE SANTOS - CNPJ. 58.250.358/0001-52, no banco:
+            <b>Parágrafo Segundo:</b> Se a opção for por depósito em conta corrente, o mesmo deve ser feito em nome do INSTITUTO HISTÓRICO E GEOGRÁFICO DE SANTOS - CNPJ. 58.250.358/0001-52, no banco:
             SICREDI (748) - AGÊNCIA 0727 - C/C 11991-8
             
-            Parágrafo Terceiro: O PATROCINADOR pode optar em contribuir com valores maiores em intervalos menores, a critério dele.
+            <b>Parágrafo Terceiro:</b> O <b>PATROCINADOR</b> pode optar em contribuir com valores maiores em intervalos menores, a critério dele.
             
             <h2>CLÁUSULA TERCEIRA:     Da contrapartida.</h2>
             
-            <h4><b>3.1</b> – De conformidade com o mencionado plano de comercialização de patrocínios, o PATROCINADOR fará jus às seguintes contrapartidas:</h4>
+            <h4><b>3.1</b> – De conformidade com o mencionado plano de comercialização de patrocínios, o <b>PATROCINADOR</b> fará jus às seguintes contrapartidas:</h4>
             <h4><b>3.1.1</b>	- Aplicação da logomarca do parceiro em mural na sala de digitalização;</h4>
             <h4><b>3.1.2</b>	- Aplicação da logomarca do parceiro no site do Instituto Histórico e Geográfico de Santos, em página específica do projeto “100 Por Santos”;</h4>
             <h4><b>3.1.3</b>	- Aplicação da logomarca do parceiro em algumas postagens nas redes sociais;</h4>
@@ -95,7 +97,7 @@
             
           <h2>CLÁUSULA SEXTA – Das responsabilidades</h2>
             
-            O uso da marca do PATROCINADOR é transitório e subordinado ao cumprimento das cláusulas deste contrato, não podendo ser vinculada a outra forma ou propósito que não se aplique a este contrato.
+            O uso da marca do <b>PATROCINADOR</b> é transitório e subordinado ao cumprimento das cláusulas deste contrato, não podendo ser vinculada a outra forma ou propósito que não se aplique a este contrato.
             
           <h2>CLÁUSULA SÉTIMA – DO FORO</h2>
             
@@ -103,7 +105,25 @@
             
             E, para que o presente instrumento produza os efeitos legais e de direito as partes, de comum acordo, firmam o presente contrato em duas vias de igual teor.
             
-            Santos, DD de MM de AA. </h4>
+            
+            Santos, dia <?php echo date('d'); ?> de 
+            <?php  
+            
+            if(date('m') == '1'){echo "janeiro";}
+            if(date('m') == '2'){echo "fevereiro";}
+            if(date('m') == '3'){echo "março";}
+            if(date('m') == '4'){echo "abril";}
+            if(date('m') == '5'){echo "maio";}
+            if(date('m') == '6'){echo "junho";}
+            if(date('m') == '7'){echo "julho";}
+            if(date('m') == '8'){echo "agosto";}
+            if(date('m') == '9'){echo "setembro";}
+            if(date('m') == '10'){echo "outubro";}
+            if(date('m') == '11'){echo "novembro";}
+            if(date('m') == '12'){echo "dezembro";}
+            
+            ?> 
+            de <?php echo date('Y'); ?> </h4>
             
            <br> 
             __________________________________
@@ -111,21 +131,18 @@
             Sergio Willians dos Reis - presidente
             <br>
             <br>
-            NOME COMPLETO DO REPRESENTANTE
-            <br>NOME COMPLETO DO REPRESENTANTE			
+            <u><?php $nm_representante = $_POST["nomeRepresentante"]; if($nm_representante != null){echo $nm_representante; } ?>      </u>
+            <br><b><?php $nm_representante = $_POST["nomeRepresentante"]; if($nm_representante != null){echo $nm_representante; } ?> </b>
             <br>  Empresa Patrocinadora
             <br>
             
                 
                   <div class="clearfix">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">CANCELAR</button>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">ASSINAR</button>
-                  </div>
+                    <input type="submit" onclick="document.getElementById('id01').style.display='none'" id="btnassinar" value="ASSINAR"> 
                 </div>
-              </form>
+        </form>
             </div>
-            
-    </form>
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
@@ -139,7 +156,7 @@ window.onclick = function(event) {
 
 //$(document).ready(function(){
   //$('#email').on('input', function(){
-    //$('#myBtn').prop('disabled', $(this).val().length < 3);
+    //$('#id01').prop('disabled', $(this).val().length < 3);
   //});
 //});
 </script>
@@ -148,3 +165,4 @@ window.onclick = function(event) {
 
 </body>
 </html>
+

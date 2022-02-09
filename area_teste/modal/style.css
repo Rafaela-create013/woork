@@ -823,9 +823,10 @@ button:hover {
 }
 
 /* Float cancel and delete buttons and add an equal width */
-.cancelbtn, .deletebtn {
+input #btnassinar{
   float: left;
   width: 50%;
+  background-color: #f44336;
 }
 
 /* Add a color to the cancel button */
@@ -833,10 +834,8 @@ button:hover {
   background-color: #f44336;
   color: black;
 }
-
-/* Add a color to the delete button */
-.deletebtn {
-  background-color: #00a950;
+#btnassinar{
+	background-color: #000;
 }
 
 /* Add padding and center-align text to the container */
