@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <form class="formulario" method="post" > 
+    <form class="modal-content" method="post" action="salvar.php"> 
         <h3 id="title">Insira suas informações abaixo</h3>
             <div class="field">
                 <label for="nome">Nome da empresa:</label>
@@ -48,7 +48,7 @@
     </form>
     <div id="id01" class="modal">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-        <form class="modal-content" action="salvar.php">
+        <!-- <form class="modal-content" method="post" action="salvar.php" > -->
                 <div class="container">
                   <h1>INSTRUMENTO PARTICULAR DE CONTRATO DE PATROCÍNIO</h1>
                   <p></p>
@@ -141,7 +141,7 @@
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">CANCELAR</button>
                     <input type="submit" onclick="document.getElementById('id01').style.display='none'" id="btnassinar" value="ASSINAR"> 
                 </div>
-        </form>
+       <!-- </form> -->
             </div>
 <script>
 // Get the modal
@@ -165,4 +165,3 @@ window.onclick = function(event) {
 
 </body>
 </html>
-

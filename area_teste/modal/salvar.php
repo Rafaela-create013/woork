@@ -31,6 +31,7 @@
                                             '$nm_representante')"); 
     }   
     if (mysqli_query($conecta, $result)) {
+      echo "dados salvos com sucesso";
       } else {
         echo "Error: " . $result . "<br>" . $conecta->error;
       }
