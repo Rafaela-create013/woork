@@ -9,9 +9,9 @@
     if(!$conecta){
         die("Falha na conexao: " . mysqli_connect_error());
     }else{
-        echo "Conexao realizada com sucesso";
         
         // obtendo os valores digitados
+
         $nm_empresa = $_POST["nomeEmpresa"];
         $ds_endereco = $_POST["enderecoEmpresa"];
         $cd_cnpj = $_POST["cnpjEmpresa"];
@@ -19,21 +19,18 @@
         $nm_representante = $_POST["nomeRepresentante"];
         $cd_cpf = $_POST["cpf"];
         $email = $_POST["email"];
+        
+        session_start();
+        $_SESSION['nomeEmpresa'] = $nm_empresa;
+        $_SESSION['enderecoEmpresa'] = $ds_endereco;
+        $_SESSION['cnpjEmpresa'] = $cd_cnpj; 
+        $_SESSION['inscricaoEmpresa'] = $cd_inscricao;
+        $_SESSION['nomeRepresentante'] = $nm_representante;
+        $_SESSION['cd_cpf'] = $cd_cpf;
+        $_SESSION['email'] = $email;
+        
+        header("Location:contrato.php");
 
-        // insert no banco de dados
-        $result = ("INSERT INTO tb_patrocinador (cd_cnpj, cd_cpf_representante, nm_empresa,
-                                                ds_endereco, cd_inscricao, nm_representante) 
-                                    VALUES ('$cd_cnpj', 
-                                            '$cd_cpf',
-                                            '$nm_empresa',
-                                            '$ds_endereco',
-                                            '$cd_inscricao',
-                                            '$nm_representante')"); 
-    }   
-    if (mysqli_query($conecta, $result)) {
-      echo "dados salvos com sucesso";
-      } else {
-        echo "Error: " . $result . "<br>" . $conecta->error;
       }
      
 mysqli_close($conecta);

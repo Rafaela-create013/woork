@@ -44,8 +44,10 @@
                 <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" >
             </div>
             <input type="submit" id="salvar" name="acao" value="ABRIR MINUTA DO CONTRATO" disabled>
-
-           
+            <form method="post" action="salvar.php">
+        
+            </form>
+    </form>
   <script>
     $(document).ready(function(){
     $('#email').on('input', function(){
